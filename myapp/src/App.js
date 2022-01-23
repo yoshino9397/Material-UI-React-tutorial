@@ -10,20 +10,21 @@ import Checkbox from "@mui/material/Checkbox";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import TextField from "@mui/material/TextField";
 
-import { makeStyles,createTheme,ThemeProvider} from "@mui/material/styles";
+// import { makeStyles } from "@mui/material/styles";
+import { createTheme, ThemeProvider } from "@mui/material/styles";
 
 import orange from "@mui/material/colors/orange";
 
-const useStyles = makeStyles({
-  root: {
-    border: 0,
-    borderRadius: 15,
-    color: "white",
-    padding: "5px 30px",
-    marginBottom: 15,
-    background: "linear-gradient(45deg,#FE6B8B,#FE8E53)",
-  },
-});
+// const useStyles = makeStyles({
+//   root: {
+//     border: 0,
+//     borderRadius: 15,
+//     color: "white",
+//     padding: "5px 30px",
+//     marginBottom: 15,
+//     background: "linear-gradient(45deg,#FE6B8B,#FE8E53)",
+//   },
+// });
 
 const theme = createTheme({
   palette: {
@@ -33,10 +34,10 @@ const theme = createTheme({
   },
 });
 
-function ButtonStyled() {
-  const classes = useStyles();
-  return <Button className={classes.root}>Test Styled Button</Button>;
-}
+// function ButtonStyled() {
+//   const classes = useStyles();
+//   return <Button className={classes.root}>Test Styled Button</Button>;
+// }
 
 function CheckboxExample() {
   const [checked, setChecked] = useState(true);
@@ -46,7 +47,7 @@ function CheckboxExample() {
         <Checkbox
           checked={checked}
           onChange={(e) => setChecked(e.target.checked)}
-          color="primary"
+          color="secondary"
           inputProps={{
             "aria-label": "secondary checkbox",
           }}
@@ -62,7 +63,7 @@ function App() {
     <ThemeProvider theme={theme}>
       <div className="App">
         <header className="App-header">
-          <ButtonStyled />
+          {/* <ButtonStyled /> */}
           <TextField
             variant="filled"
             color="secondary"
@@ -88,7 +89,7 @@ function App() {
               size="large"
               // disabled
               variant="contained"
-              color="secondary"
+              color="primary"
             >
               Discard
             </Button>
