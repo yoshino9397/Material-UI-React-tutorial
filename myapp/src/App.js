@@ -1,5 +1,4 @@
 import React from "react";
-import logo from "./logo.svg";
 import { useState } from "react";
 import "./App.css";
 import ButtonGroup from "@mui/material/ButtonGroup";
@@ -148,7 +147,6 @@ function App() {
                 Discard
               </Button>
             </ButtonGroup>
-            <img src={logo} className="App-logo" alt="logo" />
           </header>
         </div>
       </Container>
